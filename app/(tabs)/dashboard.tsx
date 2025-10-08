@@ -4,11 +4,15 @@ import { StyleSheet } from "react-native";
 import ProgressBar from "@/components/ProgressBar";
 import { Text, View } from "@/components/Themed";
 
+const BASE_URL = "https://raw.githubusercontent.com/FHU/fhu-meal-tracker/refs/heads/main/"
+
 export default function DashboardScreen() {
   const getData = async () => {
-    const response = await fetch("data.json");
+
+    const response = await fetch(BASE_URL + "data.json");
     const data = await response.json();
 
+    console.log(data)
     setMealsRemaining(data.meals.remaining);
   };
 
@@ -33,6 +37,8 @@ export default function DashboardScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab One</Text>
+
+       <Text> {mealsRemaining}</Text>
 
       <ProgressBar
         title="Steps Yesterday"

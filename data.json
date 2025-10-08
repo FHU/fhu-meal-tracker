@@ -1,4 +1,9 @@
 {
+  "mealPlan": {
+    "name" : "Meal Plan A",
+    "totalMeals" : 14,
+    "totalDiningDollars": 175
+  },
   "diningDollars": {
     "remaining": 43.98,
     "total": 175,
@@ -14,12 +19,12 @@
     "total": 5,
     "renewal": "week"
   },
-  "chickFilA" : {
+  "chickFilA": {
     "remaining": 0,
     "total": 2,
     "renewal": "week"
   },
-  "guestMeals" : {
+  "guestMeals": {
     "remaining": 4,
     "total": 5,
     "renewal": "semester"
